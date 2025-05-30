@@ -11,7 +11,7 @@ const studentData = {
 };
 
 // Ensure this URL is from your LATEST Apps Script deployment that has doOptions
-const APPS_SCRIPT_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxisK9nJn7ebizBuxPfG3mPNkhAWw5f1tjlarvN9OmNVPhbUCLN_GE42MGVNs3WqWe4/exec';
+const APPS_SCRIPT_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbymRqxf6A37M629CCfv_ObwK9Eg8pgEVF-d_2VIXdVaRXvDOwLAcAuAHc1g5TGVgDdykQ/exec';
 
 document.addEventListener('DOMContentLoaded', function() {
     const totalStudents = Object.keys(studentData.users).length;
