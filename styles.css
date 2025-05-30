@@ -227,113 +227,79 @@ h1 {
     left: 100%;
 }
 
-.student-list-section {
-    flex: 2;
-    min-width: 300px;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    padding: 30px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    max-height: 600px;
-    overflow-y: auto;
-    position: relative;
-}
-
-.student-list-section::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
-    z-index: 3;
-    pointer-events: none;
-}
-
-.student-list-section h2 {
-    margin-bottom: 20px;
-    color: #4DFFDF;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: sticky;
-    top: 0;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 10px 0;
-    backdrop-filter: blur(5px);
-    z-index: 2;
-}
-
-.student-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 15px;
-}
-
-.student-card {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    transition: all 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.student-card:hover {
-    background: rgba(77, 255, 223, 0.15);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.status-indicator {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #ff4757;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s;
-    box-shadow: 0 0 10px rgba(255, 71, 87, 0.5);
-    position: relative;
-    z-index: 2;
-}
-
-.status-indicator.submitted {
-    background: #2ed573;
-    box-shadow: 0 0 15px #2ed573;
-    animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(46, 213, 115, 0.7); }
-    70% { box-shadow: 0 0 0 10px rgba(46, 213, 115, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(46, 213, 115, 0); }
-}
-
-.student-info {
-    flex: 1;
-    position: relative;
-    z-index: 2;
-}
-
-.student-id {
-    font-weight: bold;
-    color: #FFD700;
-    font-size: 1.1rem;
-}
-
-.student-name {
-    font-size: 0.95rem;
-    opacity: 0.9;
-}
+        .student-list-section {
+            flex: 2;
+            min-width: 300px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        
+        .student-list-section h2 {
+            margin-bottom: 20px;
+            color: #4DFFDF;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .student-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        
+        .student-card {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .student-card:hover {
+            background: rgba(77, 255, 223, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .status-indicator {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #ff4757;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .status-indicator.submitted {
+            background: #2ed573;
+            box-shadow: 0 0 15px #2ed573;
+        }
+        
+        .student-info {
+            flex: 1;
+        }
+        
+        .student-id {
+            font-weight: bold;
+            color: #FFD700;
+            font-size: 1.1rem;
+        }
+        
+        .student-name {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
 
 .instructions {
     background: rgba(0, 0, 0, 0.3);
