@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CE Assignment Submission Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-file-upload"></i> CE Assignment Submission Portal</h1>
+            <p class="subtitle">Class Representative: CE Assignment Submission Portal for uploading assignments. All uploaded files are automatically saved to Google Drive with Student ID filenames.</p>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <h2 id="totalStudents">112</h2>
+                    <p>Total Students</p>
+                </div>
+                <div class="stat-card">
+                    <h2 id="submittedCount">0</h2>
+                    <p>Assignments Submitted</p>
+                </div>
+                <div class="stat-card">
+                    <h2 id="pendingCount">112</h2>
+                    <p>Assignments Pending</p>
+                </div>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <div class="upload-section">
+                <h2><i class="fas fa-cloud-upload-alt"></i> Upload Assignment</h2>
+                <div class="upload-box">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Upload Your Assignment File</h3>
+                    <p>Maximum file size: 15MB</p>
+                    <div class="file-types">
+                        <div class="file-type">PDF</div>
+                        <div class="file-type">DOC</div>
+                        <div class="file-type">DOCX</div>
+                        <div class="file-type"><span class="dwg-highlight">DWG</span></div>
+                    </div>
+                    <button class="upload-btn" id="uploadTrigger">
+                        <i class="fas fa-upload"></i> Choose File
+                    </button>
+                    <input type="file" id="fileInput" class="file-input" accept=".pdf,.doc,.docx,.dwg">
+                    <div id="fileName" style="margin-top: 15px; font-style: italic;"></div>
+                </div>
+                
+                <div class="student-selection">
+                    <h3>Select Your Student ID:</h3>
+                    <select id="studentSelect" style="width: 100%; padding: 12px; margin-top: 10px; background: rgba(0,0,0,0.3); color: white; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px;">
+                        <option value="">-- Select your Student ID --</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+                
+                <button id="submitBtn" class="upload-btn" style="width: 100%; margin-top: 20px; justify-content: center; background: linear-gradient(to right, #00b09b, #96c93d);">
+                    <i class="fas fa-paper-plane"></i> Submit Assignment
+                </button>
+            </div>
+            
+            <div class="student-list-section">
+                <h2><i class="fas fa-users"></i> Student Submission Status</h2>
+                <div class="student-list" id="studentList">
+                    <!-- Student cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h2><i class="fas fa-info-circle"></i> Submission Guidelines</h2>
+            <p>Please follow these instructions carefully to ensure your assignment is submitted correctly:</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Select Your File</h3>
+                        <p>Click "Choose File" and select your assignment document.</p>
+                        <p>Supported formats: PDF, DOC, DOCX, <span class="dwg-highlight">DWG</span></p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Identify Yourself</h3>
+                        <p>Select your Student ID from the dropdown list.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Submit Assignment</h3>
+                        <p>Click "Submit Assignment" to upload to Google Drive.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Filename Format</h3>
+                        <p>Files are saved as: <span class="file-name-example">ID_NUMBER.EXTENSION</span></p>
+                        <p>Example: <span class="file-name-example">0802420105101002.dwg</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>CE Assignment Submission Portal | Class Representative System | Secure Google Drive Storage</p>
+            <p>© 2023 Computer Engineering Department. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
