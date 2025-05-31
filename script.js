@@ -116,11 +116,11 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         const extension = file.name.split('.').pop().toLowerCase();
-        const validExtensions = ['pdf', 'doc', 'docx', 'dwg'];
+        const validExtensions = ['dwg', 'zip'];
         if (!validExtensions.includes(extension)) {
-            alert('Invalid file type. Please upload a PDF, DOC, DOCX, or DWG file.');
-            return;
-        }
+        alert('Invalid file type. Please upload a DWG or ZIP file.');
+        return;
+}
         if (file.size > 15 * 1024 * 1024) { // 15MB
             alert('File size exceeds 15MB limit');
             return;
