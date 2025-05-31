@@ -46,7 +46,6 @@ const studentData = {
     }
 };
 
-// Replace with your NEW deployment URL
 const APPS_SCRIPT_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyInINvlc-r-5GvZ6IuzmGKW5Pz_VDVIAWehd8bGaY_AXnMSzDRUZ6ONuborQOLQ__51A/exec';
 
 document.addEventListener('DOMContentLoaded', function() {
